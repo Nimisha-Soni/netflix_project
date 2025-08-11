@@ -121,8 +121,7 @@ From netflix
 Group by 1
 ```
 
-## --10.Find each year and the average numbers of content release in India on netflix.
-## return top 5 year with highest avg content release!
+## --10.Find each year and the average numbers of content release in India on netflix. Return top 5 year with highest avg content release!
 ```sql
 Select 
    Extract(Year from TO_DATE(date_added , 'Month DD, YYYY')) as year,
@@ -167,9 +166,7 @@ order by 2 DESC
 LIMIT 10
 ```
 
-## --15. Categorize the content based on the presence of the keywords 'kill' and 'violence' in 
-## the description field. Label content containing these keywords as 'Bad' and all other 
-## content as 'Good'. Count how many items fall into each category.
+## --15. Categorize the content based on the presence of the keywords 'kill' and 'violence' in the description field. Label content containing these keywords as 'Bad' and all other content as 'Good'. Count how many items fall into each category.
 ```sql
 With new_table
 AS(
@@ -192,6 +189,6 @@ Group by 1
 ## Findings and Conclusion
 
 - **Content Distribution:** The dataset includes a wide variety of TV series and films with different genres and ratings.
- - **Common Ratings:** Knowledge of the most popular ratings helps determine who the content is intended for.
- **Geographical Insights:** Regional content distribution is highlighted by the top nations and the average content releases by India.
- **Content Categorization:** Sorting content according to particular keywords aids in comprehending the type of content that is accessible on Netflix.
+- **Common Ratings:** Knowledge of the most popular ratings helps determine who the content is intended for.
+- **Geographical Insights:** Regional content distribution is highlighted by the top nations and the average content releases by India.
+- **Content Categorization:** Sorting content according to particular keywords aids in comprehending the type of content that is accessible on Netflix.

@@ -16,7 +16,7 @@ The data for this project is sourced from the Kaggle dataset:
 - **Dataset Link:**[Movies Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download)
 
 ## Schema:
-'''sql
+```sql
 --NETFLIX PROJECT
 CREATE TABLE netflix(
 show_id VARCHAR(6),
@@ -33,7 +33,7 @@ listed_in VARCHAR(100),
 description VARCHAR(250)
 );
 
-'''
+```
 
 ## Business Problems and Solutions
 

@@ -72,7 +72,7 @@ release_year = 2020;
 ```
 ## --4. Find the top 5 countries with the most content on Netflix
 ```sql
---First we converted the country from strint to array and then we un-nested it
+--First we converted the country from string to array and then we un-nested it
 Select  UNNEST(String_to_Array(country,',')) as new_country,
 count(show_id) as total_count
 from netflix
@@ -113,7 +113,8 @@ From netflix
 where type = 'TV Show'
   AND  SPLIT_PART(duration,' ', 1):: numeric> 5
 
-## --9. Count the number of content items in each genre
+### 9. Count the Number of Content Items in Each Genre
+```sql
 Select UNNEST(STRING_TO_ARRAY(listed_in,',')) AS genre,
 Count(show_id) as total_count
 From netflix
